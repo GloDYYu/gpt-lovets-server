@@ -73,9 +73,9 @@ public class ServerManager implements LifecycleObject {
             try {
                 connector.start();
             } catch (BindException e) {
-                LOGGER.warn("Port disabled due to conflict", e);
+                LOGGER.warn("Порт отключен из-за конфликта", e);
             } catch (ConnectException e) {
-                LOGGER.warn("Connection failed", e);
+                LOGGER.warn("Соединение не удалось", e);
             }
         }
     }

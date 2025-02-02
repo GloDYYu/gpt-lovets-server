@@ -388,7 +388,7 @@ public final class QueryBuilder {
                     try {
                         method.invoke(object, objectMapper.readValue(value, parameterType));
                     } catch (InvocationTargetException | IllegalAccessException | IOException error) {
-                        LOGGER.warn("Set property error", error);
+                        LOGGER.warn("Ошибка установки свойства", error);
                     }
                 }
             });

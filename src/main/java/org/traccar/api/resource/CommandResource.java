@@ -171,7 +171,7 @@ public class CommandResource extends ExtendedObjectResource<Command> {
                     try {
                         result.add(new Typed(field.get(null).toString()));
                     } catch (IllegalArgumentException | IllegalAccessException error) {
-                        LOGGER.warn("Get command types error", error);
+                        LOGGER.warn("Ошибка получения типов команд", error);
                     }
                 }
             }

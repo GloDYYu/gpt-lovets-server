@@ -138,14 +138,14 @@ public class StatisticsManager {
                     try {
                         form.param("protocols", objectMapper.writeValueAsString(statistics.getProtocols()));
                     } catch (JsonProcessingException e) {
-                        LOGGER.warn("Failed to serialize protocols", e);
+                        LOGGER.warn("Не удалось сериализовать протоколы", e);
                     }
                 }
                 if (!statistics.getAttributes().isEmpty()) {
                     try {
                         form.param("attributes", objectMapper.writeValueAsString(statistics.getAttributes()));
                     } catch (JsonProcessingException e) {
-                        LOGGER.warn("Failed to serialize attributes", e);
+                        LOGGER.warn("Не удалось сериализовать атрибуты", e);
                     }
                 }
 

@@ -74,7 +74,7 @@ public class NotificationResource extends ExtendedObjectResource<Notification> {
                 try {
                     types.add(new Typed(field.get(null).toString()));
                 } catch (IllegalArgumentException | IllegalAccessException error) {
-                    LOGGER.warn("Get event types error", error);
+                    LOGGER.warn("Ошибка получения типов событий", error);
                 }
             }
         }

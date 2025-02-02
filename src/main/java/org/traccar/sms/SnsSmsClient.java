@@ -64,7 +64,7 @@ public class SnsSmsClient implements SmsManager {
         snsClient.publishAsync(publishRequest, new AsyncHandler<>() {
             @Override
             public void onError(Exception exception) {
-                LOGGER.error("SMS send failed", exception);
+                LOGGER.error("СМС не удалось отправить", exception);
             }
 
             @Override

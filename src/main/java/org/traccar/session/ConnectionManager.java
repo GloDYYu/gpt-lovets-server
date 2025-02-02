@@ -229,7 +229,7 @@ public class ConnectionManager implements BroadcastInterface {
                 device = storage.getObject(Device.class, new Request(
                         new Columns.All(), new Condition.Equals("id", deviceId)));
             } catch (StorageException e) {
-                LOGGER.warn("Failed to get device", e);
+                LOGGER.warn("Не удалось получить устройство", e);
             }
             if (device == null) {
                 return;
@@ -273,7 +273,7 @@ public class ConnectionManager implements BroadcastInterface {
                     new Columns.Include("status", "lastUpdate"),
                     new Condition.Equals("id", deviceId)));
         } catch (StorageException e) {
-            LOGGER.warn("Update device status error", e);
+            LOGGER.warn("Ошибка обновления статуса трекера", e);
         }
 
         updateDevice(true, device);

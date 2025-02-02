@@ -72,7 +72,7 @@ public class NotificatorManager {
                 return notificator;
             }
         }
-        throw new RuntimeException("Failed to get notificator " + type);
+        throw new RuntimeException("Не удалось получить уведомление " + type);
     }
 
     public Set<Typed> getAllNotificatorTypes() {

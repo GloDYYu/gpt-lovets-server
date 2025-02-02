@@ -54,7 +54,7 @@ public class TaskDeleteTemporary extends SingleScheduleTask {
                             new Condition.Equals("temporary", true),
                             new Condition.Compare("expirationTime", "<", "time", new Date()))));
         } catch (StorageException e) {
-            LOGGER.warn("Failed to delete temporary users", e);
+            LOGGER.warn("Не удалось удалить временных пользователей.", e);
         }
     }
 

@@ -59,7 +59,7 @@ public class PostProcessHandler extends BasePositionHandler {
                 connectionManager.updatePosition(true, position);
             }
         } catch (StorageException error) {
-            LOGGER.warn("Failed to update device", error);
+            LOGGER.warn("Не удалось обновить трекер.", error);
         }
         callback.processed(false);
     }

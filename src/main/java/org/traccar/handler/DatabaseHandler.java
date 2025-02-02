@@ -44,7 +44,7 @@ public class DatabaseHandler extends BasePositionHandler {
             position.setId(storage.addObject(position, new Request(new Columns.Exclude("id"))));
             statisticsManager.registerMessageStored(position.getDeviceId(), position.getProtocol());
         } catch (Exception error) {
-            LOGGER.warn("Failed to store position", error);
+            LOGGER.warn("Не удалось сохранить позицию", error);
         }
 
         callback.processed(false);

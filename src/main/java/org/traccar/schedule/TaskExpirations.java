@@ -123,7 +123,7 @@ public class TaskExpirations extends SingleScheduleTask {
             }
 
         } catch (StorageException | MessagingException e) {
-            LOGGER.warn("Failed to check expirations", e);
+            LOGGER.warn("Не удалось проверить сроки действия", e);
         }
     }
 

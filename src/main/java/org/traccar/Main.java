@@ -71,7 +71,7 @@ public final class Main {
             LOGGER.info("Character encoding: {}", Charset.defaultCharset().displayName());
 
         } catch (Exception error) {
-            LOGGER.warn("Failed to get system info");
+            LOGGER.warn("Не удалось получить информацию о системе");
         }
     }
 
@@ -82,7 +82,7 @@ public final class Main {
         if (args.length <= 0) {
             configFile = "./debug.xml";
             if (!new File(configFile).exists()) {
-                throw new RuntimeException("Configuration file is not provided");
+                throw new RuntimeException("Файл конфигурации не предоставлен");
             }
         } else {
             configFile = args[args.length - 1];
@@ -117,7 +117,7 @@ public final class Main {
             injector = Guice.createInjector(new MainModule(configFile), new DatabaseModule(), new WebModule());
             logSystemInfo();
             LOGGER.info("Version: {}", Main.class.getPackage().getImplementationVersion());
-            LOGGER.info("Starting server...");
+            LOGGER.info("Запуск сервера...");
 
             var services = new ArrayList<LifecycleObject>();
             for (var clazz : List.of(
@@ -129,10 +129,10 @@ public final class Main {
                 }
             }
 
-            Thread.setDefaultUncaughtExceptionHandler((t, e) -> LOGGER.error("Thread exception", e));
+            Thread.setDefaultUncaughtExceptionHandler((t, e) -> LOGGER.error("Исключение потока", e));
 
             Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-                LOGGER.info("Stopping server...");
+                LOGGER.info("Остановка сервера...");
 
                 for (var service : services) {
                     try {
@@ -150,7 +150,7 @@ public final class Main {
             } else {
                 unwrapped = e;
             }
-            LOGGER.error("Main method error", unwrapped);
+            LOGGER.error("Основная ошибка метода", unwrapped);
             System.exit(1);
         }
     }

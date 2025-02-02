@@ -61,7 +61,7 @@ public class ConsoleServlet extends JakartaWebServlet {
             method.invoke(server, true);
 
         } catch (NoSuchFieldException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
-            LOGGER.warn("Console reflection error", e);
+            LOGGER.warn("Ошибка отображения консоли", e);
         }
     }
 

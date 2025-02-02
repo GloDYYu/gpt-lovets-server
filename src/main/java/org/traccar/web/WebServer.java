@@ -175,7 +175,7 @@ public class WebServer implements LifecycleObject {
                 ResourceErrorHandler.class);
         resourceConfig.packages(ServerResource.class.getPackage().getName());
         if (resourceConfig.getClasses().stream().filter(ServerResource.class::equals).findAny().isEmpty()) {
-            LOGGER.warn("Failed to load API resources");
+            LOGGER.warn("Не удалось загрузить ресурсы API");
         }
         servletHandler.addServlet(new ServletHolder(new ServletContainer(resourceConfig)), "/api/*");
     }

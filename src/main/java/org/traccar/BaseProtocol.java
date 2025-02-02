@@ -130,14 +130,14 @@ public abstract class BaseProtocol implements Protocol {
                 if (encodedCommand != null) {
                     smsManager.sendMessage(destAddress, encodedCommand, true);
                 } else {
-                    throw new RuntimeException("Failed to encode command");
+                    throw new RuntimeException("Не удалось закодировать команду");
                 }
             } else {
                 throw new RuntimeException(
                         "Command " + command.getType() + " is not supported in protocol " + getName());
             }
         } else {
-            throw new RuntimeException("SMS is not enabled");
+            throw new RuntimeException("Отправка СМС не включена");
         }
     }
 

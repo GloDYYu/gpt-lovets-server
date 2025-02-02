@@ -157,7 +157,7 @@ public class OpenIdProvider {
 
         if (!userInfoResponse.indicatesSuccess()) {
             throw new GeneralSecurityException(
-                    "Failed to access OpenID Connect user info endpoint. Please contact your administrator.");
+                    "Не удалось получить доступ к конечной точке информации пользователя OpenID Connect. Обратитесь к администратору.");
         }
 
         return userInfoResponse.toSuccessResponse().getUserInfo();
