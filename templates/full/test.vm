@@ -1,4 +1,4 @@
-#set($subject = "Test message")
+#set($subject = "Test messageсообщение")
 <!DOCTYPE html>
 <html>
 <body>
