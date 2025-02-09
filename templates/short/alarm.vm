@@ -77,4 +77,4 @@
 #elseif($alarmName == "removing")
 	#set($alarmName = "Removing")
 #end
-$device.name alarm: $alarmName at $dateTool.format("YYYY-MM-dd HH:mm:ss", $event.eventTime, $locale, $timezone)
+У тепловоза №$device.name тревога: $alarmName в $dateTool.format("HH:mm:ss dd-MM-yyyy", $event.eventTime, $locale, $timezone)

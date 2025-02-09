@@ -1,2 +1,2 @@
 #set($subject = "$device.name: offline")
-$device.name offline at $dateTool.format("YYYY-MM-dd HH:mm:ss", $event.eventTime, $locale, $timezone)
+Тепловоз №$device.name перешёл в оффлайн-режим с $dateTool.format("HH:mm:ss dd-MM-yyyy", $event.eventTime, $locale, $timezone)

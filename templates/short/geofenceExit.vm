@@ -1,2 +1,2 @@
 #set($subject = "$device.name: has exited geofence")
-$device.name has exited geofence $geofence.name at $dateTool.format("YYYY-MM-dd HH:mm:ss", $event.eventTime, $locale, $timezone)
+Тепловоз №$device.name покинул геозону - $geofence.name в $dateTool.format("HH:mm:ss dd-MM-yyyy", $event.eventTime, $locale, $timezone)

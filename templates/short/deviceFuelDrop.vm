@@ -1,2 +1,2 @@
 #set($subject = "$device.name: fuel drop")
-$device.name fuel drop at $dateTool.format("YYYY-MM-dd HH:mm:ss", $event.eventTime, $locale, $timezone)
+У тепловоза №$device.name зафиксировано падение уровня топлива в $dateTool.format("HH:mm:ss dd-MM-yyyy", $event.eventTime, $locale, $timezone)

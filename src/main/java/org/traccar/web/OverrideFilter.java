@@ -67,8 +67,8 @@ public class OverrideFilter implements Filter {
                     throw new RuntimeException(e);
                 }
 
-                String title = server.getString("title", "Система мониторинга за тепловозами");
-                String description = server.getString("description", "ЛОВЕЦ");
+                String title = server.getString("title", "ЛОВЕЦ");
+                String description = server.getString("description", "Система мониторинга за тепловозами");
                 String colorPrimary = server.getString("colorPrimary", "#007cb0");
 
                 String alteredContent = new String(wrappedResponse.getCapture(), StandardCharsets.UTF_8)

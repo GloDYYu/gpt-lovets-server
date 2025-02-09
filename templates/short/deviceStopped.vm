@@ -1,2 +1,2 @@
 #set($subject = "$device.name: stopped")
-$device.name stopped at $dateTool.format("YYYY-MM-dd HH:mm:ss", $event.eventTime, $locale, $timezone)
+Тепловоз №$device.name остановился в $dateTool.format("HH:mm:ss dd-MM-yyyy", $event.eventTime, $locale, $timezone)

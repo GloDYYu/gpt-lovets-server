@@ -1,2 +1,2 @@
 #set($subject = "$device.name: command result received")
-$device.name command result received: $position.getString("result") at $dateTool.format("YYYY-MM-dd HH:mm:ss", $event.eventTime, $locale, $timezone)
+От тепловоза №$device.name получен результат команды: $position.getString("result") в $dateTool.format("HH:mm:ss dd-MM-yyyy", $event.eventTime, $locale, $timezone)

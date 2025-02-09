@@ -1,2 +1,2 @@
 #set($subject = "Test message")
-Test message
+Тестовое сообщение получено! Канал связи работает.
